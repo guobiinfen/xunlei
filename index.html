@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/index.css"/>
+</head>
+<body>
+<script src="jquery-1.12.4.js"></script>
+<script>
+
+    $(document).ready(function(){
+        //    鼠标移入显示二维码，移出隐藏二维码
+        $(".footer .inner .right .a2").mouseenter(function(){
+            $(".QR").show();
+        })
+          $(".footer .inner .right .a2").mouseleave(function(){
+            $(".QR").hide();
+        })
+
+        //    主体部分鼠标移入里面的图片上下弹动
+        $(".banner>.main li").mouseenter(function(){
+            var idx= $(this).index();
+            var $span= $(".banner>.main li:eq("+idx+") span");
+
+            $(this).children("span").stop().animate({
+                top:100
+            },100,function(){
+                $span.stop().animate({
+                    top:114
+                },100,function(){
+                    $span.stop().animate({
+                        top:107
+                    },50,function(){
+                        $span.stop().animate({
+                            top:114
+                        },50)
+                    })
+                })
+            })
+        })
+    })
+
+</script>
+<!--banner 大背景部分开始-->
+<div class="banner">
+    呵呵呵呵
+    <!--顶部通栏部分开始-->
+    <div class="top">
+        <div class="inner w">
+            <h1 class="logo">
+                <a href="#" title="V7专属平台">
+                    <img src="image/logo.png">
+                </a>
+            </h1>
+            <div class="nav">
+                <ul>
+                    <li><a href=#">首页</a></li>
+                    <li><a href=#">活动</a></li>
+                    <li><a href=#">特权</a></li>
+                    <li><a href=#">V专区</a></li>
+                </ul>
+            </div>
+            <div class="login">
+                <ul>
+                    <li><a href="#">登录</a></li>
+                    <li><a href="#">注册</a></li>
+                    <li class="line">|</li>
+                    <li><a href="#">帮助</a></li>
+                </ul>
+            </div>
+            <div class="vip">
+                <a href="#">开通超级会员</a>
+            </div>
+
+        </div>
+    </div>
+    <!--顶部通栏部分结束-->
+    <!--z中间主体部分开始-->
+    <div class="main w">
+        <ul>
+            <li>
+                <h3>填资料领会员</h3>
+                <p>完善V7个人信息<br>免费领取迅雷白金会员</p>
+                <span></span>
+                <a href="#">立即领取</a>
+            </li>
+             <li>
+                <h3>体验快人一步</h3>
+                <p>新产品<br>新版本优先体验</p>
+                <span></span>
+                <a href="#">立即体验</a>
+            </li>
+             <li>
+                <h3>会员专享福利</h3>
+                <p>7折年费</p>
+                <span></span>
+                <a href="#">7折开会员</a>
+            </li>
+             <li>
+                <h3>幸运摇奖</h3>
+                <p>每日免费摇奖</p>
+                <span></span>
+                <a href="#">立即摇奖</a>
+            </li>
+
+        </ul>
+
+    </div>
+    <!--z中间主体部分结束-->
+
+
+</div>
+<!--banner 大背景部分结束-->
+<!--底部导航开始-->
+<div class="footer">
+    <div class="inner w">
+        <div class="left">
+            <h3>迅雷会员服务</h3>
+            <a href="#"><i></i><span>迅雷会员论坛</span></a>
+            <a class="a2" href="#"><i></i><span>迅雷网游加速器</span></a>
+            <br/>
+            <a class="a3" href="#"><i></i><span>迅雷积分商城</span></a>
+            <a class="a4" href="#"><i></i><span>迅雷产品中心</span></a>
+        </div>
+        <div class="center">
+            <h3>迅雷会员专属客服</h3>
+            <i></i>
+            <ul>
+                <li><a href="#">帮助中心</a></li>
+                <li class="line">|</li>
+                <li><a href="#">在线客服</a></li>
+            </ul>
+
+        </div>
+        <div class="right">
+            <h3>关注我们</h3>
+            <a href="#"><i></i><span>关注新浪微博</span></a>
+            <br/>
+            <a class="a2" href="#"><i></i><span>关注微信</span></a>
+            <div class="QR">
+                <img src="image/vipwx-1.png">
+                <i class="angle"></i>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+ <div class="buttom">
+     <div class="inner w">
+         <ul>
+             <li><a href="#">关于迅雷</a></li>
+             <li><a href="#">下载迅雷</a></li>
+             <li><a href="#">加盟迅雷</a></li>
+             <li><a href="#">广告服务</a></li>
+             <li><a href="#">商务合作</a></li>
+             <li><a href="#">客服中心</a></li>
+             <li><a href="#">安全中心</a></li>
+             <li><a href="#">用户协议</a></li>
+             <li class="line">|</li>
+             <li class="line">&copy;2003-2008 Xunlei.com 版权所有</li>
+         </ul>
+     </div>
+ </div>
+<!--底部导航结束-->
+
+
+</body>
+</html>
